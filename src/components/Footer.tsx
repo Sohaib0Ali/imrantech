@@ -9,12 +9,12 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="bg-white text-primary font-bold text-xl p-2 rounded-md">
-                IMRAN
+                SOFTWARE
               </div>
-              <span className="font-bold text-xl">Tech Hub</span>
+              <span className="font-bold text-xl">Zone Firmware</span>
             </div>
             <p className="text-sm text-white/80">
-              Your one-stop solution for software and electronics needs. Quality products and exceptional service.
+              Your trusted source for Smart TV software solutions. Quality firmware and exceptional support.
             </p>
           </div>
 
@@ -25,13 +25,7 @@ const Footer = () => {
                 Home
               </Link>
               <Link to="/software" className="text-sm hover:text-white/80 transition-colors">
-                Software
-              </Link>
-              <Link to="/electronics" className="text-sm hover:text-white/80 transition-colors">
-                Electronics
-              </Link>
-              <Link to="/services" className="text-sm hover:text-white/80 transition-colors">
-                Services
+                Smart TV Software
               </Link>
               <Link to="/contact" className="text-sm hover:text-white/80 transition-colors">
                 Contact
@@ -40,24 +34,9 @@ const Footer = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-bold text-lg">Services</h3>
-            <div className="flex flex-col space-y-2">
-              <Link to="/services" className="text-sm hover:text-white/80 transition-colors">
-                Software Solutions
-              </Link>
-              <Link to="/services" className="text-sm hover:text-white/80 transition-colors">
-                Electronic Products
-              </Link>
-              <Link to="/services" className="text-sm hover:text-white/80 transition-colors">
-                Tech Consulting
-              </Link>
-            </div>
-          </div>
-
-          <div className="space-y-4">
             <h3 className="font-bold text-lg">Contact</h3>
             <div className="flex flex-col space-y-2">
-              <p className="text-sm">Email: contact@imrantechhub.com</p>
+              <p className="text-sm">Email: aarabiaokaz@gmail.com</p>
               <p className="text-sm">Phone: +966537532084</p>
               <p className="text-sm">Address: Riyadh, Saudi Arabia</p>
             </div>
@@ -77,7 +56,7 @@ const Footer = () => {
       </div>
       <div className="border-t border-white/10">
         <div className="container mx-auto py-4 px-4 text-center text-sm">
-          <p>© {new Date().getFullYear()} IMRAN Tech Hub. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Software Zone Firmware. All rights reserved.</p>
         </div>
       </div>
     </footer>

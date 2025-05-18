@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Navigate, Link, Outlet, useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
@@ -52,15 +51,9 @@ const AdminDashboard = () => {
       </div>
       
       <Tabs value={currentPath} className="w-full mb-8">
-        <TabsList className="grid grid-cols-4 md:w-fit">
+        <TabsList className="grid grid-cols-2 md:w-fit">
           <TabsTrigger value="software" asChild>
-            <Link to="/admin/software">Software</Link>
-          </TabsTrigger>
-          <TabsTrigger value="electronics" asChild>
-            <Link to="/admin/electronics">Electronics</Link>
-          </TabsTrigger>
-          <TabsTrigger value="services" asChild>
-            <Link to="/admin/services">Services</Link>
+            <Link to="/admin/software">Smart TV Software</Link>
           </TabsTrigger>
           <TabsTrigger value="messages" asChild>
             <Link to="/admin/messages">Messages</Link>

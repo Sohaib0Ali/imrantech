@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,6 +11,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { LogIn, User, Mail, Key, AlertTriangle } from "lucide-react";
+import { Label } from "@/components/ui/label";
 
 const loginSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address" }),
@@ -33,6 +33,7 @@ const Auth = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { toast } = useToast();
+  const [name, setName] = useState("");
 
   useEffect(() => {
     if (user) {
@@ -130,13 +131,9 @@ const Auth = () => {
       <div className="container max-w-md mx-auto">
         <div className="bg-card border-2 border-border shadow-xl rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-500">
           <div className="p-8">
-            <div className="text-center mb-6">
-              <h1 className="text-3xl font-bold bg-gradient-blue text-transparent bg-clip-text">
-                Welcome to IMRAN Tech Hub
-              </h1>
-              <p className="text-muted-foreground mt-2">
-                Sign in to access premium software and electronics
-              </p>
+            <div className="text-center mb-8">
+              <h1 className="text-3xl font-bold mb-2">Welcome to Software Zone Firmware</h1>
+              <p className="text-muted-foreground">Sign in to access your account</p>
             </div>
 
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -216,7 +213,7 @@ const Auth = () => {
                             <div className="relative">
                               <User className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" />
                               <Input 
-                                placeholder="John Smith" 
+                                placeholder="sohaib ali" 
                                 {...field} 
                                 className="pl-10 border-2 focus:border-primary focus:ring-primary rounded-lg shadow-sm hover:border-primary/70 transition-all"
                               />

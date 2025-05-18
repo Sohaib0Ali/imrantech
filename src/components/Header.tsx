@@ -12,9 +12,7 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Software", path: "/software" },
-    { name: "Electronics", path: "/electronics" },
-    { name: "Services", path: "/services" },
+    { name: "Smart TV Software", path: "/software" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -28,9 +26,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <div className="bg-gradient-blue text-white font-bold text-xl p-2 rounded-md shadow-sm hover:shadow-md transition-all">
-              IMRAN
+              SOFTWARE
             </div>
-            <span className="font-bold text-xl">Tech Hub</span>
+            <span className="font-bold text-xl">Zone Firmware</span>
           </Link>
 
           {/* Desktop Nav */}

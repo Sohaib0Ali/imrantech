@@ -1,46 +1,19 @@
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 const WhatsAppButton = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const handleOpenWhatsApp = () => {
-    window.open("https://wa.me/+966537532084", "_blank");
+  const handleClick = () => {
+    window.open('https://wa.me/+966537532084?text=Hello! I would like to know more about your Smart TV software solutions.', '_blank');
   };
 
   return (
-    <div
-      className={`fixed bottom-8 right-8 z-50 transition-all duration-500 ${
-        isVisible
-          ? "translate-y-0 opacity-100"
-          : "translate-y-20 opacity-0"
-      }`}
+    <button
+      onClick={handleClick}
+      className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 z-50 flex items-center gap-2 group"
+      aria-label="Chat on WhatsApp"
     >
-      <Button
-        onClick={handleOpenWhatsApp}
-        className="rounded-full w-14 h-14 bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl p-0 animate-bounce"
-        aria-label="Contact via WhatsApp - Riyadh, Saudi Arabia"
-      >
-        <Phone className="h-6 w-6" />
-      </Button>
-      <div className="absolute top-0 left-0 w-14 h-14 bg-green-500/50 rounded-full animate-ping"></div>
-    </div>
+      <MessageSquare className="h-6 w-6" />
+      <span className="hidden md:block font-medium">Chat with us</span>
+    </button>
   );
 };
 

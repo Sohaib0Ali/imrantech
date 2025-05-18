@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import { User, Info, Clock, MapPin, MessageSquare } from "lucide-react";
+import { User, Info, Clock, MapPin, MessageSquare, Mail } from "lucide-react";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -70,14 +70,14 @@ const Contact = () => {
 
   return (
     <div className="container mx-auto section-padding min-h-screen">
-      <div className="text-center mb-10 max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4 bg-gradient-blue text-transparent bg-clip-text">Contact Us</h1>
-        <p className="text-gray-600">
-          Have questions or need assistance? Our team is here to help you with all your software and electronics inquiries.
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold mb-4">Contact Software Zone Firmware</h1>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Have questions about our Smart TV software solutions? We're here to help. Reach out to us through any of the following channels.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-1">
           <div className="bg-card shadow-lg rounded-xl p-8 border-2 border-border hover:border-primary/50 transition-all duration-300">
             <h2 className="text-2xl font-bold mb-6 text-center">Contact Information</h2>
@@ -88,7 +88,7 @@ const Contact = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-medium">IMRAN Tech Hub</p>
+                  <p className="font-medium">Software Zone Firmware</p>
                   <p className="text-muted-foreground">Official Store</p>
                 </div>
               </div>
@@ -100,18 +100,6 @@ const Contact = () => {
                 <div>
                   <p className="font-medium">Our Location</p>
                   <p className="text-muted-foreground">Riyadh, Saudi Arabia</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="bg-primary/10 p-3 rounded-full mr-4">
-                  <Info className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <p className="font-medium">Email Us</p>
-                  <a href="mailto:info@imrantechhub.com" className="text-primary hover:underline transition-all">
-                    info@imrantechhub.com
-                  </a>
                 </div>
               </div>
               
